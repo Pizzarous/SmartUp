@@ -1,0 +1,18 @@
+.divIntro {
+    border: none;
+}
+
+.logo {
+    width: 100%;
+    max-width: 600px;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+button {
+    width: 85px;
+}
