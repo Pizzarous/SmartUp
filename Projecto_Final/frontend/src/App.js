@@ -199,7 +199,45 @@ const GAMES = {
         { coordObj: [600, 400, 70], found: false }
       ]
     }
-  ]]
+  ]],
+
+  OBJECTS_GAME: [[
+    {
+      original: 'https://i.imgur.com/kIc1UGR.jpg',
+      modified: 'https://i.imgur.com/rw42MWf.jpg',
+      coords: [
+        { slashpos: 210, coordObj: [55, 450, 50], found: false },
+        { slashpos: 30, coordObj: [95, 480, 50], found: false },
+        { slashpos: 410, coordObj: [527, 20, 200], found: false },
+        { slashpos: 600, coordObj: [1230, 400, 70], found: false }
+      ]
+    }
+  ], [
+    {
+      original: 'https://i.imgur.com/EW0IV65.jpg',
+      modified: 'https://i.imgur.com/x2NcFMR.jpg',
+      coords: [
+        { slashpos: 5, coordObj: [960, 350, 90], found: false },
+        { slashpos: 150, coordObj: [290, 70, 170], found: false },
+        { slashpos: 300, coordObj: [590, 160, 100], found: false },
+        { slashpos: 455, coordObj: [610, 270, 120], found: false },
+        { slashpos: 630, coordObj: [770, 450, 90], found: false }
+      ]
+    }
+  ], [
+    {
+      original: 'https://i.imgur.com/Vzu6tlA.jpg',
+      modified: 'https://i.imgur.com/XgZ3tLq.jpg',
+      coords: [
+        { slashpos: 5, coordObj: [900, 400, 110], found: false },
+        { slashpos: 160, coordObj: [530, 230, 110], found: false },
+        { slashpos: 320, coordObj: [90, 400, 100], found: false },
+        { slashpos: 470, coordObj: [1100, 190, 100], found: false },
+        { slashpos: 600, coordObj: [570, 0, 130], found: false }
+      ]
+    }
+  ]],
+  ALPHABET: [['CAT', 'DOG', 'FISH', 'MOUSE', 'LION', 'ELEPHANT', 'DOLPHIN', 'FACILNAOE', 'PANDA', 'CHEETAH', 'PENGUIN', 'FROG', 'BEE', 'SHARK', 'CROCODILE', 'HORSE', 'WHALE', 'RHINOCEROS', 'BEAR']]
 }
 
 
@@ -215,9 +253,6 @@ function App() {
       }
     })
   }
-
-  // console.log(GAMES.DIFFERENCES_GAME.length)
-  // console.log(GAMES.DIFFERENCES_GAME[0])
 
   return (
     <div>
@@ -237,6 +272,13 @@ function App() {
                 gameNumber={index}
                 gameTotal={2} />} />
 
+            <Route path='/games/objects'
+              element={<HiddenObj
+                game={GAMES.OBJECTS_GAME[index]}
+                nextGame={() => handleChange(GAMES.OBJECTS_GAME)}
+                gameNumber={index}
+                gameTotal={2} />} />
+
             <Route path='/games/quiz'
               element={<Quiz
                 game={GAMES.MATH_GAMES[index]}
@@ -244,10 +286,11 @@ function App() {
                 gameNumber={index}
                 gameTotal={2} />} />
 
-            <Route path='/games/alphabetsoup' element={<AlphabetSoup />} />
+            <Route path='/games/alphabetsoup'
+              element={<AlphabetSoup
+                game={GAMES.ALPHABET[0]} />} />
 
 
-            <Route path='/games/objects' element={<HiddenObj />} />
 
             {/* <Route path='/games/obj2' element={<HiddenObj2 />} />
             <Route path='/games/obj3' element={<HiddenObj3 />} /> */}

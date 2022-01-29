@@ -7,7 +7,7 @@ import styles from './GamesCSS/SpotDiff.module.css';
 sync('spin');
 
 export default function SpotDiff(props) {
-    console.log(props.game[props.gameNumber])
+
     const [result, setResultado] = useState(0);
     const [shake1, setShake1] = useState(false);
     const [shake2, setShake2] = useState(false);
@@ -23,15 +23,12 @@ export default function SpotDiff(props) {
     }, [props.game[0]]);
 
 
-
-
     function reloadGame() {
         setResultado(0);
         setCoords(c => c.map(e => ({ ...e, found: false })))
     }
 
-    console.log(props.gameNumber)
-    console.log(props.gameTotal)
+
     function Victory() {
         if (coords.every((e) => e.found === true)) {
             return (
@@ -44,7 +41,6 @@ export default function SpotDiff(props) {
 
                     <button className={styles.arrow} onClick={() => reloadGame()}>Try Again!</button>
 
-                    {/* <button className={styles.arrow} onClick={() => reloadGame()}>Next</button> */}
                     {props.gameNumber === props.gameTotal
                         ? <></>
                         : <button

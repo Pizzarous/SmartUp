@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './GamesCSS/AlphabetSoup.module.css';
 
 
-export default function AlphabetSoup() {
+export default function AlphabetSoup(props) {
 
     const ORIENTATION = [{ line: 0, column: 1 }, { line: 1, column: 0 }];
     const ABC = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -14,10 +14,12 @@ export default function AlphabetSoup() {
     const [gameBoard, setGameBoard] = useState(
         { gameBoard: undefined, selectedWords: [], wasFound: [] }
     );
+    const [wordsGen, setWordsGen] = useState(props.game);
 
     useEffect(() => {
         loadGame()
-    }, []);
+        setWordsGen(props.game)
+    }, [props.game]);
 
     function loadGame() {
         setSelectedLetters('')
@@ -62,7 +64,7 @@ export default function AlphabetSoup() {
     }
 
     function randomizeSoupWordsOrder() {
-        let words = ['CAT', 'DOG', 'FISH', 'MOUSE', 'LION', 'ELEPHANT', 'DOLPHIN', 'FACILNAOE', 'PANDA', 'CHEETAH', 'PENGUIN', 'FROG', 'BEE', 'SHARK', 'CROCODILE', 'HORSE'];
+        let words = wordsGen
 
         let currentIndex = words.length, randomIndex;
 
@@ -199,7 +201,7 @@ export default function AlphabetSoup() {
 
                 <button className={styles.arrow} onClick={() => loadGame()}>Try Again!</button>
 
-                <Link to={'/games'}>
+                <Link to={'../games'}>
                     <button className={styles.arrow}>Exit</button>
                 </Link>
 
@@ -241,7 +243,7 @@ export default function AlphabetSoup() {
                         <div>
                             <button className={styles.clickables} onClick={() => loadGame()}>Start Over!</button>
 
-                            <Link to={'/games/obj1'}>
+                            <Link to={'../games'}>
                                 <button className={styles.clickables}>Exit</button>
                             </Link>
                         </div>
