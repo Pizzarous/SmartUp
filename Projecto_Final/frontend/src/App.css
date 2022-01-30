@@ -10,6 +10,21 @@
   align-content: center;
   justify-content: center;
   align-items: center;
+
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .container {
@@ -53,10 +68,11 @@ a.nav-link {
 }
 
 a.nav-link:hover {
-  color: #ffa62b;
+  color: white;
 
   transform: scale(1.1);
 }
+
 
 .navbar-expand {
   background-color: #FF6B6B;
@@ -81,6 +97,10 @@ a.nav-link:hover {
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.form-control {
+  width: 300px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -116,10 +136,19 @@ a.nav-link:hover {
 
 
 .row>* {
-  position: relative;
-  bottom: 0;
-  /* width: 100%; */
-  text-align: center;
+  display: flex;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  margin-top: var(--bs-gutter-y);
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  text-align: left;
 }
 
 .navbar-expand .navbar-collapse {

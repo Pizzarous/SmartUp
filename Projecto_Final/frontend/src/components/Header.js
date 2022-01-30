@@ -28,16 +28,17 @@ const Header = () => {
               {userInfo ? (
                 <>
                   <NavDropdown
-                    title={`${userInfo.name}`}
-                    id="collapsible-nav-dropdown"
-                  >
-                    <NavDropdown.Item onClick={logoutHandler}>
+                    title={`< ${userInfo.name} />`}
+                    id="collapsible-nav-dropdown">
+                    <NavDropdown.Item href="/" onClick={logoutHandler}>
                       Logout
                     </NavDropdown.Item>
                   </NavDropdown>
                 </>
               ) : (
                 <>
+                  <Nav.Link href="/register">{`< Sign-Up`}</Nav.Link>
+                  <Nav.Link href="/login">{`Login />`}</Nav.Link>
                 </>
               )}
             </Nav>

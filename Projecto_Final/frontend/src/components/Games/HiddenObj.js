@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/alt-text */
-import { Link } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import sync from 'css-animation-sync';
 import styles from './GamesCSS/HiddenObj.module.css';
@@ -34,9 +33,9 @@ export default function HiddenObj(props) {
                 <div className={styles.victory}>
                     <h2>Congratulations you found all the objects!</h2>
 
-                    <Link to={'../games'}>
-                        <button className={styles.arrow}>Exit</button>
-                    </Link>
+                    <button
+                        className={styles.arrow}
+                        onClick={() => window.location.pathname = '/games'}>Exit</button>
 
                     <button className={styles.arrow} onClick={() => reloadGame()}>Try Again!</button>
 

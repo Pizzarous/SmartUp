@@ -1,9 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Routes, Route, BrowserRouter } from "react-router-dom";
-import { useState } from 'react';
-import LandingPage from "./screens/LandingPage/LandingPage";
-import RegisterScreen from "./screens/RegisterScreen/RegisterScreen";
-import LoginScreen from "./screens/LoginScreen/LoginScreen";
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import LandingPage from './screens/LandingPage/LandingPage';
+import RegisterScreen from './screens/RegisterScreen/RegisterScreen';
+import LoginScreen from './screens/LoginScreen/LoginScreen';
 import GamesScreen from './screens/GamesScreen/GamesScreen';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -11,8 +11,7 @@ import AlphabetSoup from './components/Games/AlphabetSoup';
 import SpotDiff from './components/Games/SpotDiff';
 import Quiz from './components/Games/Quiz';
 import HiddenObj from './components/Games/HiddenObj';
-// import HiddenObj2 from './components/Games/HiddenObj2';
-// import HiddenObj3 from './components/Games/HiddenObj3';
+import CountAnimals from './components/Games/CountAnimals';
 import './App.css';
 
 
@@ -111,7 +110,7 @@ const GAMES = {
     },
   ], [
     {
-      questionText: "How much is 12 + 6?",
+      questionText: 'How much is 12 + 6?',
       answerOptions: [
         { answerText: '16', isCorrect: false },
         { answerText: '20', isCorrect: false },
@@ -120,7 +119,7 @@ const GAMES = {
       ],
     },
     {
-      questionText: "How much is 18 - 13?",
+      questionText: 'How much is 18 - 13?',
       answerOptions: [
         { answerText: '6', isCorrect: false },
         { answerText: '5', isCorrect: true },
@@ -129,7 +128,7 @@ const GAMES = {
       ],
     },
     {
-      questionText: "How much is 19 - 14?",
+      questionText: 'How much is 19 - 14?',
       answerOptions: [
         { answerText: '7', isCorrect: false },
         { answerText: '5', isCorrect: true },
@@ -138,7 +137,7 @@ const GAMES = {
       ],
     },
     {
-      questionText: "How much is 13 + 11?",
+      questionText: 'How much is 13 + 11?',
       answerOptions: [
         { answerText: '24', isCorrect: true },
         { answerText: '20', isCorrect: false },
@@ -147,7 +146,7 @@ const GAMES = {
       ],
     },
     {
-      questionText: " How much is 17 - 11?",
+      questionText: ' How much is 17 - 11?',
       answerOptions: [
         { answerText: '15', isCorrect: false },
         { answerText: '8', isCorrect: false },
@@ -237,7 +236,29 @@ const GAMES = {
       ]
     }
   ]],
-  ALPHABET: [['CAT', 'DOG', 'FISH', 'MOUSE', 'LION', 'ELEPHANT', 'DOLPHIN', 'FACILNAOE', 'PANDA', 'CHEETAH', 'PENGUIN', 'FROG', 'BEE', 'SHARK', 'CROCODILE', 'HORSE', 'WHALE', 'RHINOCEROS', 'BEAR']]
+
+  ALPHABET: [['CAT', 'DOG', 'FISH', 'MOUSE', 'LION', 'ELEPHANT', 'DOLPHIN', 'FACILNAOE', 'PANDA', 'CHEETAH', 'PENGUIN', 'FROG', 'BEE', 'SHARK', 'CROCODILE', 'HORSE', 'WHALE', 'RHINOCEROS', 'BEAR']],
+
+  COUNT: [[
+    {
+      url: 'https://i.imgur.com/xEewZr2.jpg',
+      animal: 'Sheeps',
+      rightAnswer: 4
+    }
+  ], [
+    {
+      url: 'https://i.imgur.com/rhaIPpF.jpg',
+      animal: 'Pigs',
+      rightAnswer: 4
+    }
+  ], [
+    {
+      url: 'https://i.imgur.com/gGMPDsX.jpg',
+      animal: 'Birds',
+      rightAnswer: 5
+    }
+  ]
+  ]
 }
 
 
@@ -254,16 +275,17 @@ function App() {
     })
   }
 
+
   return (
     <div>
       <Header />
-      <div className="structure">
+      <div className='structure'>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/login" element={<LoginScreen />} />
-            <Route path="/register" element={<RegisterScreen />} />
-            <Route path="/games" element={<GamesScreen />} />
+            <Route path='/' element={<LandingPage />} />
+            <Route path='/login' element={<LoginScreen />} />
+            <Route path='/register' element={<RegisterScreen />} />
+            <Route path='/games' element={<GamesScreen />} />
 
             <Route path='/games/differences'
               element={<SpotDiff
@@ -290,10 +312,12 @@ function App() {
               element={<AlphabetSoup
                 game={GAMES.ALPHABET[0]} />} />
 
-
-
-            {/* <Route path='/games/obj2' element={<HiddenObj2 />} />
-            <Route path='/games/obj3' element={<HiddenObj3 />} /> */}
+            <Route path='/games/countanimals'
+              element={<CountAnimals
+                game={GAMES.COUNT[index]}
+                nextGame={() => handleChange(GAMES.COUNT)}
+                gameNumber={index}
+                gameTotal={2} />} />
 
           </Routes>
         </BrowserRouter>

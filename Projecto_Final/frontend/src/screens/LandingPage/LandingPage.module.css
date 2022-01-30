@@ -16,3 +16,17 @@
 button {
     width: 85px;
 }
+
+.sendButtonP {
+    width: 170px;
+    height: 60px;
+    color: #fff;
+    background-color: #ffa62b;
+    border-color: #ffa62b;
+}
+
+.sendButtonP:hover {
+    color: #fff;
+    background-color: #FF6B6B;
+    border-color: #FF6B6B;
+}

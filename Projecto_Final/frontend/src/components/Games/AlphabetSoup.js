@@ -1,12 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { Link } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import styles from './GamesCSS/AlphabetSoup.module.css';
 
 
 export default function AlphabetSoup(props) {
 
-    const ORIENTATION = [{ line: 0, column: 1 }, { line: 1, column: 0 }];
+    const ORIENTATION = [{ line: 0, column: 1 }, { line: 1, column: 0 }, { line: 1, column: 1 }];
     const ABC = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     const [selectedLetters, setSelectedLetters] = useState('');
     const [lastSelected, setLastSelected] = useState();
@@ -123,12 +122,13 @@ export default function AlphabetSoup(props) {
                 return (<tr key={i}>{
                     r.map((d, j) => {
                         return (<td className={wrong ? styles.wrong : ''}
-                            key={d + j} x={i} y={j} onClick={(e) => { letterClick(e) }}>{d}</td>)
-                    })
-                }
+                            key={d + j} x={i} y={j} batata={false}
+                            // style={arroz = false && { backgroundColor: '#fff' }} 
+                            onClick={(e) => letterClick(e)}>{d}</td>)
+                    })}
                 </tr>)
             })}
-        </tbody></table>)
+        </tbody></table >)
     }
 
     function letterClick(e) {
@@ -147,6 +147,14 @@ export default function AlphabetSoup(props) {
                 })
 
             } else if (right && tempLastSelect.x === parseInt(e.target.getAttribute('x'))) {
+                setSelectedLetters(s => s.concat(e.target.innerText))
+                setLastSelected({
+                    x: parseInt(e.target.getAttribute('x')),
+                    y: parseInt(e.target.getAttribute('y'))
+                })
+            } else if (
+                (right && tempLastSelect.x !== parseInt(e.target.getAttribute('x')))
+                && (down && tempLastSelect.y !== parseInt(e.target.getAttribute('y')))) {
                 setSelectedLetters(s => s.concat(e.target.innerText))
                 setLastSelected({
                     x: parseInt(e.target.getAttribute('x')),
@@ -201,18 +209,21 @@ export default function AlphabetSoup(props) {
 
                 <button className={styles.arrow} onClick={() => loadGame()}>Try Again!</button>
 
-                <Link to={'../games'}>
-                    <button className={styles.arrow}>Exit</button>
-                </Link>
+                <button
+                    className={styles.arrow}
+                    onClick={() => window.location.pathname = '/games'}>Exit</button>
 
             </div>)
         } else return null
     }
 
     return (
-        <div>
+        <div className={styles.wrapper}>
+            <div className={styles.maintitle}>
+                <h1>Alphabet Soup</h1>
+                <h3>Find all the words!</h3>
+            </div>
             <div className={styles.alphabetSoup}>
-
                 <div className={styles.columnOne}>
 
                     <div>
@@ -243,9 +254,9 @@ export default function AlphabetSoup(props) {
                         <div>
                             <button className={styles.clickables} onClick={() => loadGame()}>Start Over!</button>
 
-                            <Link to={'../games'}>
-                                <button className={styles.clickables}>Exit</button>
-                            </Link>
+                            <button
+                                className={styles.arrow}
+                                onClick={() => window.location.pathname = '/games'}>Exit</button>
                         </div>
                     </div>
 

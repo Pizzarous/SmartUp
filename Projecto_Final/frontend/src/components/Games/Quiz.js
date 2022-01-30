@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
 import styles from './GamesCSS/Quiz.module.css';
 
 
@@ -59,9 +58,9 @@ export default function Quiz(props) {
 
                             <button className={styles.arrow} onClick={() => reloadGame()}>Try Again!</button>
 
-                            <Link to={'../games'}>
-                                <button className={styles.arrow}>Exit</button>
-                            </Link>
+                            <button
+                                className={styles.arrow}
+                                onClick={() => window.location.pathname = '/games'}>Exit</button>
                         </div>
                     </div>
                 </div>

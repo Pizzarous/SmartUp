@@ -1,6 +1,20 @@
 .registerContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 20px;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+}
+
+.formErrorError {
+  color: red;
+  margin-top: 20px;
+}
+
+.register {
+  display: flex;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}

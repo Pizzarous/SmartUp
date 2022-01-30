@@ -62,22 +62,26 @@ function LoginScreen() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </Form.Group>
+          <div className={styles.login}>
+            <Button className={styles.submitButton} type="submit">
+              Submit
+            </Button>
+          </div>
+        </Form>
+        <Row className={styles.newAccount}>
+          <Col>
+            <br />
+            Don't have an account yet? <Link to="/register">Register Here!</Link>
+          </Col>
+        </Row>
+        <div className={styles.formErrorError}>
 
           <Col className={styles.inputError}>
             {error && <ErrorMessage>{error}</ErrorMessage>}
           </Col>
-
-          <Button className={styles.submitButton} type="submit">
-            Submit
-          </Button>
-        </Form>
-        <Row className={styles.newAccount}>
-          <Col>
-            Don't have an account yet? <Link to="/register">Register Here!</Link>
-          </Col>
-        </Row>
+        </div>
       </div>
-    </MainScreen>
+    </MainScreen >
   );
 }
 

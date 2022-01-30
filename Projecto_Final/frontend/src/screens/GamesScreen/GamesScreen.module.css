@@ -4,6 +4,8 @@
     align-items: center;
     width: 100vw;
     border: none;
+
+    user-select: none;
 }
 
 .categoriesDiv {
@@ -25,28 +27,60 @@
 }
 
 .eachGameAttMainDiv {
-
+    background-image: inherit;
     width: 200px;
     height: 300px;
-    border: 2px solid black;
+    border: 2px solid white;
     border-radius: 5px;
     margin: 30px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px #ff6b6b;
+    outline: 1px solid #ff6b6b;
+    -webkit-text-stroke-width: 1px;
+    opacity: 0.7;
+    transition: 0.6s ease all;
+}
+
+.eachGameAttMainDiv:hover {
+    transform:
+        perspective(800px) rotateY(-15deg) translateY(0px) rotateX(10deg) scale(1.1);
+    opacity: 1;
+    outline: 0px transparent;
+    box-shadow: 5px 5px 30px #ff6b6b;
 }
 
 .eachGameCalcMainDiv {
+    background-image: inherit;
     width: 200px;
     height: 300px;
-    border: 2px solid black;
+    border: 2px solid white;
     border-radius: 5px;
     margin: 30px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px #ff6b6b;
+    outline: 1px solid #ff6b6b;
+    -webkit-text-stroke-width: 1px;
+    opacity: 0.7;
+    transition: 0.6s ease all;
+}
+
+
+.eachGameCalcMainDiv:hover {
+    transform:
+        perspective(800px) rotateY(-15deg) translateY(0px) rotateX(10deg) scale(1.1);
+    opacity: 1;
+    outline: 0px transparent;
+    box-shadow: 5px 5px 30px #ff6b6b;
 }
 
 
@@ -59,26 +93,40 @@
     display: flex;
     width: 100%;
     text-decoration: none;
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px;
+    border: 3px;
 }
 
 .btn {
     color: white;
-    background-color: #ff6b6b;
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px;
+    background-color: #ff6b6b50;
+    border: 3px;
     width: 100%;
-    height: 50px;
+    height: 300px;
     border: none;
+    font-size: 24px;
+    transition: 300ms;
+
+    color: white;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+
 }
 
-/* .btn:hover {
-    color: white;
-    background-color: #ff6b6b;
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px;
+.btn:hover {
+    color: transparent;
+    background-color: rgba(255, 0, 0, 0);
+    border: 3px;
     width: 100%;
-    height: 50px;
+    height: 300px;
     border: none;
-} */
+
+    text-shadow:
+        0px 0px 0 transparent,
+        1px 0px 0 transparent,
+        0px 1px 0 transparent,
+        1px 1px 0 transparent;
+
+}

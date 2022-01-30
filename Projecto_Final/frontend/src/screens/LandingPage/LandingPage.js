@@ -23,7 +23,11 @@ function LandingPage() {
             </div>
             <div className={styles.buttonContainer}>
               {userInfo ? (
-                <></>
+                <>
+                  <Link to="/games">
+                    <Button className={styles.sendButtonP}>PLAY HERE!</Button>
+                  </Link>
+                </>
               ) : (
                 <>
                   <Link to="/login">
