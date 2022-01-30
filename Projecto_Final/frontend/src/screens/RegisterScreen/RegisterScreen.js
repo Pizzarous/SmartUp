@@ -36,9 +36,8 @@ function RegisterScreen() {
     }, [loading, error, submitted, navigate]);
 
     return (
-        <MainScreen title="REGISTER">
+        <MainScreen title="SIGN-UP">
             <div className={styles.registerContainer}>
-                {loading && <Loading />}
                 <Form onSubmit={submitHandler}>
                     <Form.Group className={styles.formFields} controlId="name">
                         <Form.Label>Name</Form.Label>
@@ -106,6 +105,7 @@ function RegisterScreen() {
                             {error && <ErrorMessage>{error}</ErrorMessage>}
                         </Col>
                     </Row>
+                    {loading && <Loading />}
                 </div>
             </div>
         </MainScreen>

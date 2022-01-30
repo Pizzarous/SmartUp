@@ -41,7 +41,7 @@ function LoginScreen() {
   return (
     <MainScreen title="LOGIN">
       <div className={styles.loginContainer}>
-        {loading && <Loading />}
+
         <Form onSubmit={submitHandler}>
           <Form.Group className={styles.inputField} controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
@@ -75,10 +75,12 @@ function LoginScreen() {
           </Col>
         </Row>
         <div className={styles.formErrorError}>
-
-          <Col className={styles.inputError}>
-            {error && <ErrorMessage>{error}</ErrorMessage>}
-          </Col>
+          <Row>
+            <Col className={styles.inputError}>
+              {error && <ErrorMessage>{error}</ErrorMessage>}
+            </Col>
+          </Row>
+          {loading && <Loading />}
         </div>
       </div>
     </MainScreen >

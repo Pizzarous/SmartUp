@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import LandingPage from './screens/LandingPage/LandingPage';
 import RegisterScreen from './screens/RegisterScreen/RegisterScreen';
 import LoginScreen from './screens/LoginScreen/LoginScreen';
