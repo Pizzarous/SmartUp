@@ -1,0 +1,182 @@
+.app {
+  background-color: #ffa62b;
+  width: 600px;
+  height: 400px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 40px 0px #1a535c;
+  max-width: 100vw;
+
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.scoreSection {
+  display: flex;
+  font-size: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* QUESTION/TIMER/LEFT SECTION */
+.questionSection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: nowrap;
+}
+
+
+.questionCount {
+  margin-bottom: 20px;
+  border: 17px
+}
+
+.questionCount span {
+  font-size: 28px;
+}
+
+.questionText {
+  margin-bottom: 15px;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.answers {
+  display: flex;
+  justify-content: center;
+}
+
+/* ANSWERS/RIGHT SECTION */
+.answerSection {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.app button {
+  width: 80%;
+  font-size: 20px;
+  color: #0e0d0d;
+  background-color: rgb(252, 252, 252);
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.app button:hover {
+  background-color: cyan;
+  border: 2px solid orange;
+  transform: scale(1.1);
+}
+
+
+.button {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: nowrap;
+}
+
+.app button.correct {
+  background-color: lime;
+  border: 2px solid orange;
+  transform: scale(1.1);
+}
+
+.app button.incorrect {
+  background-color: orangered;
+  border: 2px solid orange;
+  transform: scale(1.1);
+}
+
+.correct:hover {
+  background-color: lime;
+  border: 2px solid orange;
+  transform: scale(1.1);
+}
+
+.incorrect:hover {
+  background-color: orangered;
+  border: 2px solid orange;
+  transform: scale(1.1);
+}
+
+.victory {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.arrow {
+  width: 80%;
+  font-size: 20px;
+  color: #0e0d0d;
+  background-color: rgb(252, 252, 252);
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+
+.arrow:hover {
+  background-color: cyan;
+  border: 2px solid orange;
+  transform: scale(1.1);
+}
+
+.arrow:active {
+  position: relative;
+  top: 1px;
+}
+
+.message {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-weight: normal;
+}
+
+.victory a {
+  text-decoration: none;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
