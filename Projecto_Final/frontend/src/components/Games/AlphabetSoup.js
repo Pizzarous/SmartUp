@@ -122,8 +122,7 @@ export default function AlphabetSoup(props) {
                 return (<tr key={i}>{
                     r.map((d, j) => {
                         return (<td className={wrong ? styles.wrong : ''}
-                            key={d + j} x={i} y={j} batata={false}
-                            // style={arroz = false && { backgroundColor: '#fff' }} 
+                            key={d + j} x={i} y={j}
                             onClick={(e) => letterClick(e)}>{d}</td>)
                     })}
                 </tr>)
