@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import sync from 'css-animation-sync';
 import styles from './GamesCSS/SpotDiff.module.css';
 
@@ -13,6 +14,7 @@ export default function SpotDiff(props) {
     const [coords, setCoords] = useState(props.game[0].coords);
     const [oriImg, setoriImg] = useState(props.game[0].original);
     const [modImg, setmodImg] = useState(props.game[0].modified);
+    const navigate = useNavigate();
 
     useEffect(() => {
         setCoords(props.game[0].coords);
@@ -36,7 +38,7 @@ export default function SpotDiff(props) {
 
                     <button
                         className={styles.arrow}
-                        onClick={() => window.location.pathname = '#/games'}>Exit</button>
+                        onClick={() => navigate('/games')}>Exit</button>
 
                     <button className={styles.arrow} onClick={() => reloadGame()}>Try Again!</button>
 

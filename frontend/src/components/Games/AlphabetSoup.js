@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './GamesCSS/AlphabetSoup.module.css';
 
 
@@ -14,6 +15,7 @@ export default function AlphabetSoup(props) {
         { gameBoard: undefined, selectedWords: [], wasFound: [] }
     );
     const [wordsGen, setWordsGen] = useState(props.game);
+    const navigate = useNavigate();
 
     useEffect(() => {
         loadGame()
@@ -210,7 +212,7 @@ export default function AlphabetSoup(props) {
 
                 <button
                     className={styles.arrow}
-                    onClick={() => window.location.pathname = '#/games'}>Exit</button>
+                    onClick={() => navigate('/games')}>Exit</button>
 
             </div>)
         } else return null
@@ -255,7 +257,7 @@ export default function AlphabetSoup(props) {
 
                             <button
                                 className={styles.arrow}
-                                onClick={() => window.location.pathname = '#/games'}>Exit</button>
+                                onClick={() => navigate('/games')}>Exit</button>
                         </div>
                     </div>
 

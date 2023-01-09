@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import styles from './GamesCSS/CountAnimals.module.css'
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import styles from './GamesCSS/CountAnimals.module.css';
 
 // const RES_WIDTH = '1200px';
 // const RES_HEIGHT = '800px';
@@ -12,6 +13,7 @@ export default function CountAnimals(props) {
     const [url, setURL] = useState(props.game[0].url);
     const [animal, setAnimal] = useState(props.game[0].animal);
     const [rightAnswer, setRightAnswer] = useState(props.game[0].rightAnswer);
+    const navigate = useNavigate();
 
     useEffect(() => {
         setURL(props.game[0].url);
@@ -48,7 +50,7 @@ export default function CountAnimals(props) {
 
                     <button
                         className={styles.arrow}
-                        onClick={() => window.location.pathname = '#/games'}>Exit</button>
+                        onClick={() => navigate('/games')}>Exit</button>
 
                     <button className={styles.arrow}
                         onClick={() => reloadGame()}>Try Again!</button>
@@ -70,7 +72,7 @@ export default function CountAnimals(props) {
 
                     <button
                         className={styles.arrow}
-                        onClick={() => window.location.pathname = '#/games'}>Exit</button>
+                        onClick={() => navigate('/games')}>Exit</button>
 
 
                     <button className={styles.arrow}

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import styles from './GamesCSS/Quiz.module.css';
 
 
@@ -7,6 +8,7 @@ export default function Quiz(props) {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [status, setStatus] = useState()
     const [questions, setQuestions] = useState(props.game)
+    const navigate = useNavigate();
 
     useEffect(() => {
         setQuestions(props.game)
@@ -60,7 +62,7 @@ export default function Quiz(props) {
 
                             <button
                                 className={styles.arrow}
-                                onClick={() => window.location.pathname = '#/games'}>Exit</button>
+                                onClick={() => navigate('/games')}>Exit</button>
                         </div>
                     </div>
                 </div>
