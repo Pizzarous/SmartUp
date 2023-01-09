@@ -1,4 +1,4 @@
-# 🌟 SmartUp: The Leader in Educational Games for Kids 🌟
+# [🌟 SmartUp: The Leader in Educational Games for Kids 🌟](https://pizzarous.github.io/SmartUp/)
 
 Welcome to SmartUp, the ultimate destination for educational games for kids! Our website was created as a final project for the Bytes4Future bootcamp and won first place 🎉. Our goal is to help kids have fun while they learn.
 
