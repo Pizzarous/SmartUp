@@ -1,6 +1,6 @@
-# [🌟 SmartUp: The Leader in Educational Games for Kids 🌟](https://pizzarous.github.io/SmartUp/)
+# 🌟 SmartUp: The Leader in Educational Games for Kids 🌟
 
-Welcome to SmartUp, the ultimate destination for educational games for kids! Our website was created as a final project for the Bytes4Future bootcamp and won first place 🎉. Our goal is to help kids have fun while they learn.
+Welcome to [SmartUp](https://pizzarous.github.io/SmartUp), the ultimate destination for educational games for kids! Our website was created as a final project for the Bytes4Future bootcamp and won first place 🎉. Our goal is to help kids have fun while they learn.
 
 ## 🎉 Features 🎉
 
@@ -10,7 +10,7 @@ Welcome to SmartUp, the ultimate destination for educational games for kids! Our
 
 ## 🚀 Installation 🚀
 
-To install and run the SmartUp website, follow these steps:
+To install and run the SmartUp website on your computer, follow these steps:
 
 1. Clone the repository to your local machine.
 2. Navigate to the `frontend` and `backend` directories and run `npm install` to install the necessary dependencies.
