@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, /* BrowserRouter, */ HashRouter } from 'react-router-dom';
 import { useState } from 'react';
 import LandingPage from './screens/LandingPage/LandingPage';
 import RegisterScreen from './screens/RegisterScreen/RegisterScreen';
@@ -280,7 +280,8 @@ function App() {
     <div>
       <Header />
       <div className='structure'>
-        <BrowserRouter>
+        {/* <BrowserRouter> */}
+        <HashRouter>
           <Routes>
             <Route path='/' element={<LandingPage />} />
             <Route path='/login' element={<LoginScreen />} />
@@ -320,7 +321,8 @@ function App() {
                 gameTotal={2} />} />
 
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
+        {/* </BrowserRouter> */}
       </div>
       <Footer />
     </div>
