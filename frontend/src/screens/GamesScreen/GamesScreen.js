@@ -17,7 +17,7 @@ function GamesScreen() {
                     <div className={styles.eachGameAttMainDiv}
                         style={{ backgroundImage: "url(https://i.imgur.com/stgLdEJ.jpg)" }}>
                         <div className={styles.eachGameBtnDiv}>
-                            {userInfo ? (
+                            {/* userInfo */ true == true ? (
                                 <Link to={'/games/differences'}>
                                     <button className={styles.btn}>
                                         SPOT THE DIFFERENCES
@@ -37,7 +37,7 @@ function GamesScreen() {
                     <div className={styles.eachGameAttMainDiv}
                         style={{ backgroundImage: "url(https://i.imgur.com/jHUfQ05.jpg)" }}>
                         <div className={styles.eachGameBtnDiv}>
-                            {userInfo ? (
+                            {/* userInfo */ true == true ? (
                                 <Link to={'/games/alphabetsoup'}>
 
                                     <button className={styles.btn}>
@@ -58,7 +58,7 @@ function GamesScreen() {
                     <div className={styles.eachGameAttMainDiv}
                         style={{ backgroundImage: "url(https://i.imgur.com/5fDehWd.jpg)" }}>
                         <div className={styles.eachGameBtnDiv}>
-                            {userInfo ? (
+                            {/* userInfo */ true == true ? (
                                 <Link to={'/games/objects'}>
                                     <button className={styles.btn}>
                                         FIND THE OBJECTS
@@ -83,7 +83,7 @@ function GamesScreen() {
                     <div className={styles.eachGameCalcMainDiv}
                         style={{ backgroundImage: "url(https://i.imgur.com/7oFJhDH.jpg)" }}>
                         <div className={styles.eachGameBtnDiv}>
-                            {userInfo ? (
+                            {/* userInfo */ true == true ? (
                                 <Link to={'/games/quiz'}>
                                     <button className={styles.btn}>
                                         MATH QUIZZES
@@ -103,7 +103,7 @@ function GamesScreen() {
                     <div className={styles.eachGameCalcMainDiv}
                         style={{ backgroundImage: "url(https://i.imgur.com/hnoEShK.jpg)" }}>
                         <div className={styles.eachGameBtnDiv}>
-                            {userInfo ? (
+                            {/* userInfo */ true == true ? (
                                 <Link to={'/games/countanimals'}>
                                     <button className={styles.btn}>
                                         COUNT THE ANIMALS

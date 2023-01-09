@@ -22,7 +22,7 @@ function LandingPage() {
                 Let's get started by getting in to your account!</p>
             </div>
             <div className={styles.buttonContainer}>
-              {userInfo ? (
+              {/*userInfo*/ true == true ? (
                 <>
                   <Link to="/games">
                     <Button className={styles.sendButtonP}>PLAY HERE!</Button>
