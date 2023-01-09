@@ -210,7 +210,7 @@ export default function AlphabetSoup(props) {
 
                 <button
                     className={styles.arrow}
-                    onClick={() => window.location.pathname = '/games'}>Exit</button>
+                    onClick={() => window.location.pathname = '#/games'}>Exit</button>
 
             </div>)
         } else return null
@@ -255,7 +255,7 @@ export default function AlphabetSoup(props) {
 
                             <button
                                 className={styles.arrow}
-                                onClick={() => window.location.pathname = '/games'}>Exit</button>
+                                onClick={() => window.location.pathname = '#/games'}>Exit</button>
                         </div>
                     </div>
 

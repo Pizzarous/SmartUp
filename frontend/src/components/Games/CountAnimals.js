@@ -48,7 +48,7 @@ export default function CountAnimals(props) {
 
                     <button
                         className={styles.arrow}
-                        onClick={() => window.location.pathname = '/games'}>Exit</button>
+                        onClick={() => window.location.pathname = '#/games'}>Exit</button>
 
                     <button className={styles.arrow}
                         onClick={() => reloadGame()}>Try Again!</button>
@@ -70,7 +70,7 @@ export default function CountAnimals(props) {
 
                     <button
                         className={styles.arrow}
-                        onClick={() => window.location.pathname = '/games'}>Exit</button>
+                        onClick={() => window.location.pathname = '#/games'}>Exit</button>
 
 
                     <button className={styles.arrow}
