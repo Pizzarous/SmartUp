@@ -18,14 +18,14 @@ function GamesScreen() {
                         style={{ backgroundImage: "url(https://i.imgur.com/stgLdEJ.jpg)" }}>
                         <div className={styles.eachGameBtnDiv}>
                             {/* userInfo */ true == true ? (
-                                <Link to={'/games/differences'}>
+                                <Link to={'#/games/differences'}>
                                     <button className={styles.btn}>
                                         SPOT THE DIFFERENCES
                                     </button>
                                 </Link>
                             ) : (
                                 <>
-                                    <Link to={'/login'}>
+                                    <Link to={'#/login'}>
                                         <button className={styles.btn}>
                                             LOGIN HERE TO PLAY!
                                         </button>
@@ -38,7 +38,7 @@ function GamesScreen() {
                         style={{ backgroundImage: "url(https://i.imgur.com/jHUfQ05.jpg)" }}>
                         <div className={styles.eachGameBtnDiv}>
                             {/* userInfo */ true == true ? (
-                                <Link to={'/games/alphabetsoup'}>
+                                <Link to={'#/games/alphabetsoup'}>
 
                                     <button className={styles.btn}>
                                         ALPHABET SOUP
@@ -46,7 +46,7 @@ function GamesScreen() {
                                 </Link>
                             ) : (
                                 <>
-                                    <Link to={'/login'}>
+                                    <Link to={'#/login'}>
                                         <button className={styles.btn}>
                                             LOGIN HERE TO PLAY!
                                         </button>
@@ -59,14 +59,14 @@ function GamesScreen() {
                         style={{ backgroundImage: "url(https://i.imgur.com/5fDehWd.jpg)" }}>
                         <div className={styles.eachGameBtnDiv}>
                             {/* userInfo */ true == true ? (
-                                <Link to={'/games/objects'}>
+                                <Link to={'#/games/objects'}>
                                     <button className={styles.btn}>
                                         FIND THE OBJECTS
                                     </button>
                                 </Link>
                             ) : (
                                 <>
-                                    <Link to={'/login'}>
+                                    <Link to={'#/login'}>
                                         <button className={styles.btn}>
                                             LOGIN HERE TO PLAY!
                                         </button>
@@ -84,14 +84,14 @@ function GamesScreen() {
                         style={{ backgroundImage: "url(https://i.imgur.com/7oFJhDH.jpg)" }}>
                         <div className={styles.eachGameBtnDiv}>
                             {/* userInfo */ true == true ? (
-                                <Link to={'/games/quiz'}>
+                                <Link to={'#/games/quiz'}>
                                     <button className={styles.btn}>
                                         MATH QUIZZES
                                     </button>
                                 </Link>
                             ) : (
                                 <>
-                                    <Link to={'/login'}>
+                                    <Link to={'#/login'}>
                                         <button className={styles.btn}>
                                             LOGIN HERE TO PLAY!
                                         </button>
@@ -104,14 +104,14 @@ function GamesScreen() {
                         style={{ backgroundImage: "url(https://i.imgur.com/hnoEShK.jpg)" }}>
                         <div className={styles.eachGameBtnDiv}>
                             {/* userInfo */ true == true ? (
-                                <Link to={'/games/countanimals'}>
+                                <Link to={'#/games/countanimals'}>
                                     <button className={styles.btn}>
                                         COUNT THE ANIMALS
                                     </button>
                                 </Link>
                             ) : (
                                 <>
-                                    <Link to={'/login'}>
+                                    <Link to={'#/login'}>
                                         <button className={styles.btn}>
                                             LOGIN HERE TO PLAY!
                                         </button>
