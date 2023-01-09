@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/SmartUp/static/css/main.8fed742e.css",
-    "main.js": "/SmartUp/static/js/main.e60df236.js",
+    "main.js": "/SmartUp/static/js/main.f706126f.js",
     "static/js/787.b2cf814a.chunk.js": "/SmartUp/static/js/787.b2cf814a.chunk.js",
     "index.html": "/SmartUp/index.html",
     "main.8fed742e.css.map": "/SmartUp/static/css/main.8fed742e.css.map",
-    "main.e60df236.js.map": "/SmartUp/static/js/main.e60df236.js.map",
+    "main.f706126f.js.map": "/SmartUp/static/js/main.f706126f.js.map",
     "787.b2cf814a.chunk.js.map": "/SmartUp/static/js/787.b2cf814a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8fed742e.css",
-    "static/js/main.e60df236.js"
+    "static/js/main.f706126f.js"
   ]
 }
