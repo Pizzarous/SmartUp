@@ -21,8 +21,8 @@ const Header = () => {
     <Navbar >
       <Container>
         <>
-          <Navbar.Brand href="/">&lt; SMART^UP /&gt;</Navbar.Brand>
-          <Nav.Link href="/games">All Games</Nav.Link>
+          <Navbar.Brand href="#/">&lt; SMART^UP /&gt;</Navbar.Brand>
+          <Nav.Link href="#/games">All Games</Nav.Link>
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav>
               {userInfo ? (
@@ -37,8 +37,8 @@ const Header = () => {
                 </>
               ) : (
                 <>
-                  <Nav.Link href="/register">{`< Sign-Up`}</Nav.Link>
-                  <Nav.Link href="/login">{`Login />`}</Nav.Link>
+                  <Nav.Link href="#/register">{`< Sign-Up`}</Nav.Link>
+                  <Nav.Link href="#/login">{`Login />`}</Nav.Link>
                 </>
               )}
             </Nav>
