@@ -20,7 +20,7 @@
     "module-alias": "^2.2.2",
     "mongoose": "^6.1.7",
     "react-bootstrap": "^2.1.1",
-    "react-redux": "^7.2.6",
+    "react-redux": "^8.0.0",
     "react-router": "^6.2.1"
   },
   "devDependencies": {
